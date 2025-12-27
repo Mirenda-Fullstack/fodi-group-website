@@ -5,11 +5,11 @@ export default {
     extend: {
       colors: {
         // Palette FODI Group
-        primary: '#000000',    // Noir
+        primary: '#1E40AF',    // Noir (logo)
         secondary: '#FFFFFF',  // Blanc
-        accent: '#DC2626',     // Rouge vif
-        dark: '#1F2937',       // Gris foncé
-        light: '#F3F4F6',      // Gris clair
+        accent: '#DC2626',     // Rouge vif boutons/liens
+        dark: '#1F2937',       // Gris foncé (textes)
+        light: '#F3F4F6',      // Gris clair (arreire-plan)
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
