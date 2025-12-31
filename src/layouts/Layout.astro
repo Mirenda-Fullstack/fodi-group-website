@@ -1,63 +1,155 @@
 ---
 import Footer from "../components/footer.astro";
+import Hero from "../components/Hero.astro";
 import "../styles/global.css";
 ---
-
+<!DOCTYPE html>
   <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width" initial-scale="1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-		<title>FODI GROUP</title>
-	</head>
-	  <body class="bg-white font-[Roboto] text-gray-900">
-		 <header class="sticky top-0 z-30 bg-white shadow-sm"></header>
-         <nav class="mx-auto px-4 py-4">
-            <div class="flex flex-col md:flex-row md:justify-between md:items-center">
-				<img src="images/WhatsApp Image 2025-12-14 at 10.50.48.jpeg" class="w-70 px-8 rounded-lg">
-			<div class="flex flex-wrap gap-4 md:gap-8"></div>
-               <a href="/" class="text-gray-700 hover:text-blue-700 font-medium py-2 border-b-2 border-transparent hover:border-blue-600 transition-all duration-200">Home</a>
-               <a href="about" class="text-gray-700 hover:text-blue-700 font-medium py-2 border-b-2 border-transparent hover:border-blue-600 transition-all duration-200">About</a>
-               <a href="services" class="text-gray-700 hover:text-blue-700 font-medium py-2 border-b-2 border-transparent hover:border-blue-600 transition-all duration-200">Services</a>
-               <a href="contact" class="text-gray-700 hover:text-blue-700 font-medium py-2 border-b-2 border-transparent hover:border-blue-600 transition-all duration-200">Contact</a>
-               <a href="projects" class="text-gray-700 hover:text-blue-700 font-medium py-2 border-b-2 border-transparent hover:border-blue-600 transition-all duration-200">Projects</a>
-			<div>
-			  <img src="images/WhatsApp Image 2025-12-27 at 13.16.04.jpeg" class="w-70 h-30 px-20">
-			</div>
-		</div>
-         </nav>
+        <title>FODI GROUP</title>
+      </head>
+      <body class="bg-white">
+        <div class="bg-white">
+            <nav class="flex items-center justify-between shadow-sm dark: bg-white-400 rounded-lg border-b-2 border-blue-500">
+              <div class="flex flex-col md:flex-row md:items-center gap-2">
+                <img class="h-50 w-auto size-12 shrink-0 md:w-32 lg:w-48 sm:text-left object-contain md:object-cover" src="images/WhatsApp Image 2025-12-14 at 10.50.48.jpeg">
+              </div>
+              <div class="mx-auto max-w-md md:max-w-2xl md:flex md:shrink-0">
+                <a href="/" class="text-lg font-semibold text-gray-700 rounded-lg px-4 py-2 hover:bg-blue-100 hover:text-blue-800 transition-all duration-200">Home</a>
+                <a href="/about" class="text-lg font-semibold text-gray-700 rounded-lg px-4 py-2 hover:bg-blue-100 hover:text-blue-800 transition-all duration-200">About</a>
+                <a href="/services" class="text-lg font-semibold text-gray-700 rounded-lg px-4 py-2 hover:bg-blue-100 hover:text-blue-800 transition-all duration-200">Services</a>
+                <a href="/projects" class="text-lg font-semibold text-gray-700 rounded-lg px-4 py-2 hover:bg-blue-100 hover:text-blue-800 transition-all duration-200">Projects</a>
+                <a href="/contact" class="text-lg font-semibold text-gray-700 rounded-lg px-4 py-2 hover:bg-blue-100 hover:text-blue-800 transition-all duration-200">Contact</a>
+              </div>
+               <div class="flex flex-col md:flex-row md:items-center gap-2 px-4 py-2">
+                <img class="h-30 w-25 size-12 shrink-0 md:w-32 lg:w-48 sm:text-left object-none md:object-contain" src="images/WhatsApp Image 2025-12-27 at 13.16.04.jpeg">
+              </div>
+            </nav>
+            <Hero/>
+<section class="py-16 px-4">
+  <div class="max-w-9xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">NOS SERVICES</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Découvrez notre gamme complète de solutions intégrées</p>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+    </div>
 
-		 <main>
-          <main>
-            <section class="py-12 md:py-20 bg-gradient-to-r from-blue-50 to-gray-50">
-              <div class="container mx-auto px-4">
-                <h1 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6 text-center">
-            <span class="text-blue-800">FODI GROUP SARL</span>
-          </h1>
-          <p class="text-xl md:text-2xl text-gray-700 mb-4 text-center">
-            Solutions Intégrées Multi-Secteurs
-          </p>
-          <div class="flex flex-col md:flex-row justify-center items-center gap-3 md:gap-6">
-            <span class="px-4 py-2 bg-blue-100 text-blue-800 font-semibold rounded-full">
-              Excellence
-            </span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-800 font-semibold rounded-full">
-              Fiabilité
-            </span>
-            <span class="px-4 py-2 bg-blue-100 text-blue-800 font-semibold rounded-full">
-              Innovation
-            </span>
-          </div>
+  <!--Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+       <!--Card 1 -->
+       <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <h3 class="text-xl mb-4 font-bold text-gray-800">BOIS ET SCIERIE</h3>
+            <img class="mb-6 w-full h-48 object-cover rounded-lg" src="images/OIP (7).webp">
+            <p class="text-gray-600 mb-6">Solutions complètes pour l'industrie du bois et de la scierie.</p>
+            <a class="inline-flex items-center text-blue-600 font-medium hover:underline hover:text-blue-700" href="/services/bois">En savoir plus</a>
         </div>
+
+    <!--Card 2 -->
+         <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <h3 class="text-xl mb-4 font-bold text-gray-800">IMMOBILIER</h3>
+            <img class="mb-6 w-full h-48 object-cover rounded-lg" src="public/images/OIF.webp">
+            <p class="text-gray-600 mb-6">Solutions complètes pour vos differenntes recherches d'appartements.</p>
+            <a class="inline-flex items-center text-blue-600 font-medium hover:underline hover:text-blue-700" href="/services/immobilier">En savoir plus</a>
+        </div>
+<!--Card 3 -->
+         <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <h3 class="text-xl mb-4 font-bold text-gray-800">IMPRIMERIE</h3>
+            <img class="mb-6 w-full h-48 object-cover rounded-lg" src="images/OIP.webp">
+            <p class="text-gray-600 mb-6">Solutions complètes pour vos differentes mode d'impressions numeriques.</p>
+            <a class="inline-flex items-center text-blue-600 font-medium hover:underline hover:text-blue-700" href="/services/impremerie">En savoir plus</a>
+        </div>
+</section>
+
+<section class="py-16 px-4">
+ <div class="max-w-9xl mx-auto bg-gray-50">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">POURQUOI NOUS CHOISIR</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Nos valeurs et notre expertise font la difference</p>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+    </div>
+
+<!--Raison -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+     <!--Raison 1 -->
+     <div class="text-center p-6">
+       <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <span class="text-blue-600 text-2xl">⭐</span>
+       </div>
+       <h3 class="text-xl font-bold text-gray-800 mb-4">Excellence</h3>
+       <p class="text-gray-600">Nous nous engangeons a fournir des services de la plus haute qualité</p>
+      </div>
+    <!--Raison 2-->
+    <div class="text-center p-6">
+      <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+      <span class="text-blue-600 text-2xl">🚀</span>
+      </div>
+       <h3 class="text-xl font-bold text-gray-800 mb-4">Innovation</h3>
+       <p class="text-gray-600">Solutions innovantes adaptées à vos besoins spécifiques</p>
+      </div>
+
+      <!--Raison 3-->
+    <div class="text-center p-6">
+      <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+      <span class="text-blue-600 text-2xl">🤝</span>
+      </div>
+       <h3 class="text-xl font-bold text-gray-800 mb-4">Partnariat</h3>
+       <p class="text-gray-600">Collaboration étroite avec nos clients pour des résultats optimaux</p>
+      </div>
+
+       <!--Raison 3-->
+    <div class="text-center p-6">
+      <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+      <span class="text-blue-600 text-2xl">🌍</span>
+      </div>
+       <h3 class="text-xl font-bold text-gray-800 mb-4">Durabilité</h3>
+       <p class="text-gray-600">Engagés envers des pratiques durables et respectueuses de l'environnement</p>
+      </div>
+    </div>
+</section>
       </section>
-        <slot/>
-		   <Footer/>
-		 </main>
-		
-       </body>
-	
-    </html>
+<section class="py-16 px-4">
+ <div class="max-w-9xl mx-auto bg-gray-50">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">NOS PARTENAIRES</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Nos partenaires de confiance</p>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+    </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="text-center p-6">
+       <img class="mb-6 w-full h-48 rounded-lg" src="images/eden.webp">
+      </div>
+      <div class="text-center p-6">
+       <img class="mb-6 w-full h-48 rounded-lg" src="images/OIP (16).webp">
+      </div>
+      <div class="text-center p-6">
+       <img class="mb-6 w-full h-48 rounded-lg" src="images/OIP (19).webp">
+      </div>
+      <div class="text-center p-6">
+       <img class="mb-6 w-full h-48 rounded-lg" src="images/WhatsApp Image 2025-12-27 at 22.03.09.jpeg">
+      </div>
+      <div class="text-center p-6">
+       <img class="mb-6 w-full h-48 rounded-lg" src="images/WhatsApp Image 2025-12-27 at 21.54.41.jpeg">
+      </div>
+      <div class="text-center p-6">
+       <img class="mb-6 w-full h-48  rounded-lg" src="images/WhatsApp Image 2025-12-29 at 11.27.24.jpeg">
+      </div>
+    </div>
+</section>
+<section class="py-16 px-4 mx-auto md:text-center flex items-center justify-center bg-linear-to-r from-blue-50 to-blue-300">
+ <div class="max-w-7xl mx-auto text-center">
+  <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Prêt à collaborer avec nous?</h2>
+  <p class="text-gray-700 text-lg mb-8 max-w-2xl mx-auto"> Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment nous pouvons vous aider</p> 
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="/contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300"> Nous Contacter</a>
+    <a href="/projects" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors duration-300">Voir nos projets</a>
+  </div>
+</div>
+</section>
+<Footer/>
+      </body>
+  </html>
