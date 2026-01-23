@@ -1,8 +1,256 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
+import Footer from "../components/footer.astro";
+import Hero from "../components/HomeHero.astro";
+import "../styles/global.css";
 ---
+<!DOCTYPE html>
+  <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>FODI GROUP</title>
+      </head>
+      <body class="bg-white">
+        <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-40">
+        <!--Logos -->
+          <div class="flex items-center justify-between px-4 md:px-8 py-2">
+        <!--Left logo -->
+            <div class="flex shrink-0"> 
+               <img class="h-30 md:h-30 w-auto object-contain" src="images/WhatsApp Image 2025-12-14 at 10.50.48.jpeg">
+            </div>
+        <!--Right logo -->
+           <div class="flex shrink-0">
+             <img class="h-16 md:h-28 w-auto object-contain" src="images/WhatsApp Image 2025-12-27 at 13.16.04.jpeg">
+            </div>
+          </div>
 
-<Layout>
-  
-</Layout>
+        <!--Navigation menu -->
+          <div class="bg-gray-50 px-4 py-3 md:px-8">
+            <div class="flex items-center md:justify-center">
+              
+        <!--Desktop Navigation -->
+              <nav class="hidden items-center space-x-1 bg-white shadow rounded-lg border border-blue-900/10 md:flex">
+                <a href="/" class="text-lg font-semibold text-blue-900 rounded-lg px-4 py-2 hover:bg-emerald-100 hover:text-green-600 transition-colors">Accueil</a>
+                <a href="/about" class="text-lg font-semibold text-blue-900 rounded-lg px-4 py-2 hover:bg-emerald-100 hover:text-green-600 transition-colors">À Propos</a>
+                <a href="/services" class="text-lg font-semibold text-blue-900 rounded-lg px-4 py-2 hover:bg-emerald-100 hover:text-green-600  transition-colors">Services</a>
+                <a href="/projects" class="text-lg font-semibold text-blue-900 rounded-lg px-4 py-2 hover:bg-emerald-100 hover:text-green-600  transition-colors">Réalisations</a>
+                <a href="/contact" class="text-lg font-semibold text-blue-900 rounded-lg px-4 py-2 hover:bg-emerald-100 hover:text-green-600  transition-colors">Contact</a>
+              </nav>
+        
+        <!--Mobile menu -->
+              <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-blue-500" aria-label="Toggle menu" aria-expanded="false">
+                <div class="w-6 space-y-1.5">
+                  <span class="block h-0.5 bg-gray-600 transition-transform"></span>
+                  <span class="block h-0.5 bg-gray-600 transition-opacity"></span>
+                  <span class="block h-0.5 bg-gray-600 transition-transform"></span>
+                </div>
+              </button>
+          </div>
+        
+        <!--Mobile menu seperate from icon -->
+          <div id="mobile-menu" class="md:hidden absolute left-0 mt-2 mx-4 bg-white rounded-lg shadoww-xl border opacity-0 invisible transition-all duration-200 transform -translate-y-2">
+           <div class="py-2">
+             <a href="/" class="block text-lg font-semibold text-blue-900 px-6 py-3 hover:bg-emerald-50 hover:text-green-600">Accueil</a>
+             <a href="/about" class="block text-lg font-semibold text-blue-900 px-6 py-3 hover:bg-emerald-50 hover:text-green-600">À Propos</a>
+             <a href="/services" class="block text-lg font-semibold text-blue-900 px-6 py-3 hover:bg-emerald-50 hover:text-green-600">Services</a>
+             <a href="/projects" class="block text-lg font-semibold text-blue-900 px-6 py-3 hover:bg-emerald-50 hover:text-green-600">Réalisations</a>
+             <a href="/contact" class="block text-lg font-semibold text-blue-900 px-6 py-3 hover:bg-emerald-50 hover:text-green-600">Contact</a>
+            </div>
+          </div>
+        </header>
+      
+            <Hero/>
+<section class="py-16 px-4">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">NOS SERVICES</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Découvrez notre gamme complète de solutions intégrées</p>
+      <div class="w-24 h-1 bg-emerald-600 mx-auto mt-6 rounded-full"></div>
+    </div>
+
+  <!--Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+       <!--Card 1 -->
+       <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <h3 class="text-xl mb-3 font-bold text-gray-800">BOIS ET SCIERIE</h3>
+            <img class="mb-6 w-full h-48 object-cover rounded-lg" src="images/OIP (7).webp">
+            <p class="text-gray-600 mb-6">Exploitation forestière, sciage et transformation sur mesure.</p>
+            <a class="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700" href="/services/bois">En savoir plus</a>
+        </div>
+
+    <!--Card 2 -->
+         <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <h3 class="text-xl mb-3 font-bold text-gray-800">IMMOBILIER</h3>
+            <img class="mb-6 w-full h-48 object-cover rounded-lg" src="images/OIF.webp">
+            <p class="text-gray-600 mb-6">Solutions complètes pour vos differents recherches d'appartements.</p>
+            <a class="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700" href="/services/immobilier">En savoir plus</a>
+        </div>
+<!--Card 3 -->
+         <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+            <h3 class="text-xl mb-3 font-bold text-gray-800">IMPRIMERIE</h3>
+            <img class="mb-6 w-full h-48 object-cover rounded-lg" src="images/OIP.webp">
+            <p class="text-gray-600 mb-6">Solutions complètes pour vos differents mode d'impressions numeriques.</p>
+            <a class="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700" href="/services/impremerie">En savoir plus</a>
+        </div>
+      </div>
+        <div class="md:text-center text-center mt-12">
+            <a class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300" href="/services">Voir tous nos services</a>
+        </div>
+        </div>
+</section>
+
+<section class="py-16 px-4 bg-gray-50">
+ <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">POURQUOI NOUS CHOISIR</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Nos valeurs et notre expertise font la difference</p>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+    </div>
+
+<!--Raison -->
+<section class="py-16 px-4 bg-white">
+  <div class="container mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">POURQUOI NOUS CHOISIR</h2>
+      <div class="w-24 h-1 bg-emerald-500 mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="text-center p-6 group">
+        <div class="w-16 h-16 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-900 group-hover:text-white transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Expertise Intégrée</h3>
+        <p class="text-gray-600">Une équipe unique pour tous vos projets multisectoriels</p>
+      </div>
+
+      <div class="text-center p-6 group">
+        <div class="w-16 h-16 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-900 group-hover:text-white transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Solutions Intégrées</h3>
+        <p class="text-gray-600">Des services connectés qui simplifient votre gestion</p>
+      </div>
+
+      <div class="text-center p-6 group">
+        <div class="w-16 h-16 bg-blue-50 text-blue-900 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-900 group-hover:text-white transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="16 11 18 13 22 9"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Suivi Personnalisé</h3>
+        <p class="text-gray-600">Un interlocuteur dédié pour chaque projet</p>
+      </div>
+
+      <div class="text-center p-6 group">
+        <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C10.9 14.2 12 14 15 14"/></svg>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-4">Engagement Durable</h3>
+        <p class="text-gray-600">Matériaux écologiques et impact environnemental réduit</p>
+      </div>
+    </div>
+  </div>
+</section>
+    
+<section class="py-16 px-4 bg-gray-50">
+ <div class="container mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">NOS PARTENAIRES</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Ils nous font confiance</p>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+    </div>
+  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center">
+      <div class="p-4 bg-white rounded-lg shadow-sm border-gray-200 w-full max-w-xs">
+       <img class="mb-6 w-full h-48 rounded-lg" src="images/eden.webp">
+      </div>
+      <div class="p-4 bg-white rounded-lg shadow-sm border-gray-200 w-full max-w-xs">
+       <img class="mb-6 w-full h-48 rounded-lg" src="images/OIP (16).webp">
+      </div>
+      <div class="p-4 bg-white rounded-lg shadow-sm border-gray-200 w-full max-w-xs">
+       <img class="mb-6 w-full h-48 rounded-lg" src="images/OIP (19).webp">
+      </div>
+      <div class="p-4 bg-white rounded-lg shadow-sm border-gray-200 w-full max-w-xs">
+       <img class="mb-6 w-full h-48 rounded-lg" src="images/WhatsApp Image 2025-12-27 at 22.03.09.jpeg">
+      </div>
+     <div class="p-4 bg-white rounded-lg shadow-sm border-gray-200 w-full max-w-xs">
+       <img class="mb-6 w-full h-48 rounded-lg" src="images/WhatsApp Image 2025-12-27 at 21.54.41.jpeg">
+      </div>
+      <div class="p-4 bg-white rounded-lg shadow-sm border-gray-200 w-full max-w-xs">
+       <img class="mb-6 w-full h-48 rounded-lg" src="images/WhatsApp Image 2025-12-29 at 11.27.24.jpeg">
+      </div>
+      <div class="p-4 bg-white rounded-lg shadow-sm border-gray-200 w-full max-w-xs">
+       <img class="mb-6 w-full h-48 rounded-lg" src="images/WhatsApp Image 2025-12-29 at 12.07.49.jpeg">
+      </div>
+      <div class="p-4 bg-white rounded-lg shadow-sm border-gray-200 w-full max-w-xs">
+       <img class="mb-6 w-full h-48 rounded-lg" src="images/WhatsApp Image 2026-01-08 at 16.51.35.jpeg">
+      </div>
+    </div>
+      <div class="text-center mt-10">
+        <p class="text-gray-600 mb-4">Vous souhaitez devenir partenaires?</p>
+        <a href="/contact" class="inline-block px-6 py-3 text-white font-medium rounded-lg hover:bg-gray-900 transition-colors">Devenir Partenaire</a>
+      </div>
+    </div>
+</section>
+<section class="mb-20 py-16 px-4 mx-auto md:text-center flex items-center justify-center bg-linear-to-r from-blue-50 to-blue-300">
+ <div class="max-w-7xl mx-auto text-center">
+  <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Prêt à collaborer avec nous?</h2>
+  <p class="text-gray-700 text-lg mb-8 max-w-2xl mx-auto"> Contactez-nous dès aujourd'hui pour discuter de vos besoins et découvrir comment nous pouvons vous aider</p> 
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <a href="/contact" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300"> Nous Contacter</a>
+    <a href="/projects" class="bg-white text-blue-600 border-2 border-blue-600 px-8 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors duration-300">Voir nos projets</a>
+  </div>
+</div>
+</section>
+<Footer/>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!--JS for mobile menu -->
+<script is:inline>
+   const menuButton = document.getElementById('mobile-menu-button');
+   const mobileMenu = document.getElementById('mobile-menu');
+
+   menuButton.addEventListener('click', () => {
+     const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+     menuButton.setAttribute('aria-expanded', !isExpanded); 
+
+    //Toggle menu
+    mobileMenu.classList.toggle('opacity-0');
+    mobileMenu.classList.toggle('invisible');
+    mobileMenu.classList.toggle('translate-y-0');
+    mobileMenu.classList.toggle('-translate-y-2');
+
+    //Animated hamburger icon
+    const spans = menuButton.querySelectorAll('span');
+    if(!isExpanded){
+      spans[0].style.transform = 'rotate(45deg) translate(4px, 4px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(4px, -4px)';
+    } else {
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+    }
+   });
+
+   //Close menu when clicking on the x
+   document.addEventListener('click', (e) => {
+     if(!menuButton.contains(e.target) && !mobileMenu.contains(e.target))
+     {
+       menuButton.setAttribute('aria-expanded', 'false');
+       mobileMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+       mobileMenu.classList.remove('translate-y-0');
+
+       //Reset Hamburger icon
+       const spans = menuButton.querySelectorAll('span');
+       spans[0].style.transform = 'none';
+       spans[1].style.opacity = '1';
+       spans[2].style.transform = 'none';
+     }
+    });
+</script>
+
+      </body>
+  </html>

@@ -1,1 +1,119 @@
-<h1>Services</h1>
+---
+import Hero from "../components/ServicesHero.astro";
+import Imprimerie from "../components/imprimerie.astro";
+import "../styles/global.css";
+---
+<!DOCTYPE html>
+  <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <title>FODI GROUP</title>
+      </head>
+      <body class="bg-white">
+        <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-40">
+        <!--Logos -->
+          <div class="flex items-center justify-between px-4 md:px-8 py-2">
+        <!--Left logo -->
+            <div class="flex shrink-0"> 
+               <img class="h-30 md:h-30 w-auto object-contain" src="images/WhatsApp Image 2025-12-14 at 10.50.48.jpeg">
+            </div>
+        <!--Right logo -->
+           <div class="flex shrink-0">
+             <img class="h-16 md:h-28 w-auto object-contain" src="images/WhatsApp Image 2025-12-27 at 13.16.04.jpeg">
+            </div>
+          </div>
+
+        <!--Navigation menu -->
+          <div class="bg-gray-50 px-4 py-3 md:px-8">
+            <div class="flex items-center md:justify-center">
+              
+        <!--Desktop Navigation -->
+              <nav class="hidden items-center space-x-1 bg-white shadow rounded-lg border border-blue-900/10 md:flex">
+                <a href="/" class="text-lg font-semibold text-blue-900 rounded-lg px-4 py-2 hover:bg-emerald-100 hover:text-green-600 transition-colors">Accueil</a>
+                <a href="/about" class="text-lg font-semibold text-blue-900 rounded-lg px-4 py-2 hover:bg-emerald-100 hover:text-green-600 transition-colors">À Propos</a>
+                <a href="/services" class="text-lg font-semibold text-blue-900 rounded-lg px-4 py-2 hover:bg-emerald-100 hover:text-green-600  transition-colors">Services</a>
+                <a href="/projects" class="text-lg font-semibold text-blue-900 rounded-lg px-4 py-2 hover:bg-emerald-100 hover:text-green-600  transition-colors">Réalisations</a>
+                <a href="/contact" class="text-lg font-semibold text-blue-900 rounded-lg px-4 py-2 hover:bg-emerald-100 hover:text-green-600  transition-colors">Contact</a>
+              </nav>
+        
+        <!--Mobile menu -->
+              <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-blue-500" aria-label="Toggle menu" aria-expanded="false">
+                <div class="w-6 space-y-1.5">
+                  <span class="block h-0.5 bg-gray-600 transition-transform"></span>
+                  <span class="block h-0.5 bg-gray-600 transition-opacity"></span>
+                  <span class="block h-0.5 bg-gray-600 transition-transform"></span>
+                </div>
+              </button>
+          </div>
+        
+        <!--Mobile menu seperate from icon -->
+          <div id="mobile-menu" class="md:hidden absolute left-0 mt-2 mx-4 bg-white rounded-lg shadoww-xl border opacity-0 invisible transition-all duration-200 transform -translate-y-2">
+           <div class="py-2">
+             <a href="/" class="block text-lg font-semibold text-blue-900 px-6 py-3 hover:bg-emerald-50 hover:text-green-600">Accueil</a>
+             <a href="/about" class="block text-lg font-semibold text-blue-900 px-6 py-3 hover:bg-emerald-50 hover:text-green-600">À Propos</a>
+             <a href="/services" class="block text-lg font-semibold text-blue-900 px-6 py-3 hover:bg-emerald-50 hover:text-green-600">Services</a>
+             <a href="/projects" class="block text-lg font-semibold text-blue-900 px-6 py-3 hover:bg-emerald-50 hover:text-green-600">Réalisations</a>
+             <a href="/contact" class="block text-lg font-semibold text-blue-900 px-6 py-3 hover:bg-emerald-50 hover:text-green-600">Contact</a>
+            </div>
+          </div>
+        </header>
+        <Hero/>
+
+<Imprimerie/>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!--JS for mobile menu -->
+<script is:inline>
+   const menuButton = document.getElementById('mobile-menu-button');
+   const mobileMenu = document.getElementById('mobile-menu');
+
+   menuButton.addEventListener('click', () => {
+     const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+     menuButton.setAttribute('aria-expanded', !isExpanded); 
+
+    //Toggle menu
+    mobileMenu.classList.toggle('opacity-0');
+    mobileMenu.classList.toggle('invisible');
+    mobileMenu.classList.toggle('translate-y-0');
+    mobileMenu.classList.toggle('-translate-y-2');
+
+    //Animated hamburger icon
+    const spans = menuButton.querySelectorAll('span');
+    if(!isExpanded){
+      spans[0].style.transform = 'rotate(45deg) translate(4px, 4px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(4px, -4px)';
+    } else {
+      spans[0].style.transform = 'none';
+      spans[1].style.opacity = '1';
+      spans[2].style.transform = 'none';
+    }
+   });
+
+   //Close menu when clicking on the x
+   document.addEventListener('click', (e) => {
+     if(!menuButton.contains(e.target) && !mobileMenu.contains(e.target))
+     {
+       menuButton.setAttribute('aria-expanded', 'false');
+       mobileMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
+       mobileMenu.classList.remove('translate-y-0');
+
+       //Reset Hamburger icon
+       const spans = menuButton.querySelectorAll('span');
+       spans[0].style.transform = 'none';
+       spans[1].style.opacity = '1';
+       spans[2].style.transform = 'none';
+     }
+    });
+</script>
+
+    </body>
+</html>

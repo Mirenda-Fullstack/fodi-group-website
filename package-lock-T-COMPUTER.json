@@ -1,19 +1,19 @@
 {
-  "name": "npm-create-astro-latest-fodi-group-website",
+  "name": "fodi-group-website",
   "version": "0.0.1",
   "lockfileVersion": 3,
   "requires": true,
   "packages": {
     "": {
-      "name": "npm-create-astro-latest-fodi-group-website",
+      "name": "fodi-group-website",
       "version": "0.0.1",
       "dependencies": {
         "@tailwindcss/vite": "^4.1.18",
         "astro": "^5.16.6",
+        "astro-navbar": "^2.4.0",
         "tailwindcss": "^4.1.18"
       },
       "devDependencies": {
-        "daisyui": "^5.5.14",
         "prettier-plugin-astro": "^0.14.1",
         "prettier-plugin-tailwindcss": "^0.7.2"
       }
@@ -2037,6 +2037,12 @@
         "sharp": "^0.34.0"
       }
     },
+    "node_modules/astro-navbar": {
+      "version": "2.4.0",
+      "resolved": "https://registry.npmjs.org/astro-navbar/-/astro-navbar-2.4.0.tgz",
+      "integrity": "sha512-UhQnU8lz3a0NKL5gTBXFwYg1CVzP/DNlw1z6qW7f9Q1j33oMHdjwX/TmC2/xkJTKeq4a2RxgaqeJ+6CxCxRELg==",
+      "license": "MIT"
+    },
     "node_modules/axobject-query": {
       "version": "4.1.0",
       "resolved": "https://registry.npmjs.org/axobject-query/-/axobject-query-4.1.0.tgz",
@@ -2381,16 +2387,6 @@
       "resolved": "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.28.tgz",
       "integrity": "sha512-aylIc7Z9y4yzHYAJNuESG3hfhC+0Ibp/MAMiaOZgNv4pmEdFyfZhhhny4MNiAfWdBQ1RQ2mfDWmM1x8SvGyp8g==",
       "license": "CC0-1.0"
-    },
-    "node_modules/daisyui": {
-      "version": "5.5.14",
-      "resolved": "https://registry.npmjs.org/daisyui/-/daisyui-5.5.14.tgz",
-      "integrity": "sha512-L47rvw7I7hK68TA97VB8Ee0woHew+/ohR6Lx6Ah/krfISOqcG4My7poNpX5Mo5/ytMxiR40fEaz6njzDi7cuSg==",
-      "dev": true,
-      "license": "MIT",
-      "funding": {
-        "url": "https://github.com/saadeghi/daisyui?sponsor=1"
-      }
     },
     "node_modules/debug": {
       "version": "4.4.3",
