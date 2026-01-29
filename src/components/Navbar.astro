@@ -1,22 +1,4 @@
----
-import Hero from "../components/ServicesHero.astro";
-import Imprimerie from "../pages/services/imprimerie.astro";
-import "../styles/global.css";
----
-<!DOCTYPE html>
-  <html lang="en">
-      <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-        <title>FODI GROUP</title>
-      </head>
-      <body class="bg-white">
-        <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-40">
+<header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-40">
         <!--Logos -->
           <div class="flex items-center justify-between px-4 md:px-8 py-2">
         <!--Left logo -->
@@ -63,57 +45,3 @@ import "../styles/global.css";
             </div>
           </div>
         </header>
-        <Hero/>
-
-<Imprimerie/>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-
-  <!--JS for mobile menu -->
-<script is:inline>
-   const menuButton = document.getElementById('mobile-menu-button');
-   const mobileMenu = document.getElementById('mobile-menu');
-
-   menuButton.addEventListener('click', () => {
-     const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-     menuButton.setAttribute('aria-expanded', !isExpanded); 
-
-    //Toggle menu
-    mobileMenu.classList.toggle('opacity-0');
-    mobileMenu.classList.toggle('invisible');
-    mobileMenu.classList.toggle('translate-y-0');
-    mobileMenu.classList.toggle('-translate-y-2');
-
-    //Animated hamburger icon
-    const spans = menuButton.querySelectorAll('span');
-    if(!isExpanded){
-      spans[0].style.transform = 'rotate(45deg) translate(4px, 4px)';
-      spans[1].style.opacity = '0';
-      spans[2].style.transform = 'rotate(-45deg) translate(4px, -4px)';
-    } else {
-      spans[0].style.transform = 'none';
-      spans[1].style.opacity = '1';
-      spans[2].style.transform = 'none';
-    }
-   });
-
-   //Close menu when clicking on the x
-   document.addEventListener('click', (e) => {
-     if(!menuButton.contains(e.target) && !mobileMenu.contains(e.target))
-     {
-       menuButton.setAttribute('aria-expanded', 'false');
-       mobileMenu.classList.add('opacity-0', 'invisible', '-translate-y-2');
-       mobileMenu.classList.remove('translate-y-0');
-
-       //Reset Hamburger icon
-       const spans = menuButton.querySelectorAll('span');
-       spans[0].style.transform = 'none';
-       spans[1].style.opacity = '1';
-       spans[2].style.transform = 'none';
-     }
-    });
-</script>
-
-    </body>
-</html>
