@@ -1,0 +1,74 @@
+---
+const services = [
+  {
+    title: "APPARTEMENTS MEUBLÉS",
+    img: "images/th.webp",
+    desc: "Séjours de courte ou longue durée dans des cadres luxueux et entièrement équipés pour votre confort.",
+    subservices: ["Wi-Fi Haut Débit", "Sécurité 24h/7", "Climatisation", "Service Ménage"]
+  },
+  {
+    title: "LOCATION D'APPARTEMENTS",
+    img: "images/non-meuble.webp",
+    desc: "Trouver le logement idéal pour votre famille ou vos bureaux parmi notre parc immobilier selectionné",
+    subservices: ["Studio", "Appartements T3/T4", "Espqces Bureaux", "Parking Sécurisé"]
+  },
+  {
+    title: "EXPERTISE IMMOBILIERE",
+    img: "images/expertise.avif",
+    desc: "Évaluation précise de la valeur vénale de vos biens pour vos projets de vente ou de succession.",
+    subservices: ["Évaluation", "Conseil Investissement", "Audit Immobilier"]
+  },
+  {
+   title: "LOCATION SALLE DE FETE",
+    img: "images/sale-fete.webp",
+    desc: "Des espaces modulables et élégants pour vos mariages, conférences et événenements corporatifs",
+    subservices: ["Sonorisation", "Traiteur sur mesure", "Capacité 200+ places", "Espace VIP"]
+  }
+];
+
+---
+<section class="py-20 px-4 bg-gray-50">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-black text-[#1B80BE] mb-4 font-century">Services Immobiliers</h2>
+        <p class="text-[#767171] font-medium max-w-2xl mx-auto">Des espaces de vie et d'évnements conçu pour votre excellence</p>
+        <div class="w-24 h-1.5 bg-[#47AD43] mx-auto mt-6 rounded-full"></div>
+      </div>
+  
+  <!--Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {services.map((service) => (
+          <div class="group bg-white rounded-2xl shadow-sm border-b-4 border-b-[#986E3C] border-gray-100  transition-all duration-300 flex flex-col overflow-hidden hover:shadow-xl">
+            <div class="h-94 overflow-hidden relative">
+             <img 
+               src={service.img}
+               alt={service.title}
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <div class="p-8 flex flex-col grow">
+            <h3 class="text-2xl font-bold text-[#767171] mb-3 font-century">{service.title}</h3>
+            <p class="text-[#767171] mb-6 leading-relaxed text-sm">{service.desc}</p>
+  
+          <div class="mb-8">
+            <p class="text-[10px] font-bold uppercase tracking-tighter text-[#1B80BE] mb-3">Nos Solutions: </p>
+            <div class="flex flex-wrap gap-2">
+              {service.subservices.map((sub) => (
+                 <span class="px-3 py-1 bg-emerald-50 text-[#767171] text-xs font-semibold rounded-md border border-gray-100">
+                  {sub} 
+                 </span>
+                ))}
+            </div>
+          </div>
+  
+        <div class="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+          <a href={`/projects?filter=${service.title.toLowerCase().replace(/\s+/g, '-')}`} class="inline-flex items-center text-[#47AD43] font-bold hover:translate-x-1 transition-transform">
+            Voir nos réalisations <span class="ml-2">→</span>
+          </a>
+        </div>
+        </div>
+      </div>
+        ))}
+        </div>
+        </div>
+  </section>

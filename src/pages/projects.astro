@@ -1,0 +1,22 @@
+<script is:inline>
+    document.addEventListener('DOMContentLoaded', () => {
+//Get the category from the URL
+ const params = new URLSearchParams(window.location.search);
+ const filterTag = params.get('filter');
+
+ if (filterTag) {
+// Find the category or input
+   const searchInput = document.getElementById('serach-input');
+
+//Set the value and trigger the filter function you already built 
+if (searchInput){
+//Replace dashes back to spaces fpr the search input
+    searchInput.value = filterTag(/-/g, ' ');
+
+    //Manually trigger the 'input' event so that the filter logic runs
+     searchInput.dispatchEvent(new Event('input)'));
+   }
+ }
+});
+
+</script>

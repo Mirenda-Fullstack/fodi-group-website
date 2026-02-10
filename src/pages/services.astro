@@ -1,8 +1,13 @@
 ---
 import Hero from "../components/ServicesHero.astro";
 import Imprimerie from "../pages/services/imprimerie.astro";
+import Bois from "../pages/services/bois.astro";
+import Immobilier from "../pages/services/immobilier.astro";
+import Layout from "../layouts/Layout.astro";
+import Transport from "../pages/services/transport.astro";
 import "../styles/global.css";
 ---
+
 <!DOCTYPE html>
   <html lang="en">
       <head>
@@ -63,9 +68,17 @@ import "../styles/global.css";
             </div>
           </div>
         </header>
+        <Layout>
         <Hero/>
 
 <Imprimerie/>
+
+<Bois/>
+
+<Immobilier />
+
+<Transport />
+</Layout>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
