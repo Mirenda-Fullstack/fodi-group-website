@@ -1,0 +1,75 @@
+---
+const services = [
+  {
+    title: "OUTILLAGE",
+    img: "images/outillage.avif",
+    desc: "Outils manuels et électriques pour les professionnels et les particuliers.",
+    subservices: ["Marteaux", "Perceuses", "Tournevis", "Clés"]
+  },
+  {
+    title: "FIXATIONS",
+    img: "images/fixations.avif",
+    desc: "Solutions de fixation robustes pour tous vos projets de construction.",
+    subservices: ["Vis", "Boulons", "Chevilles", "Clous"]
+  },
+  {
+    title: "ÉQUIPEMENTS DE SÉCURITÉ",
+    img: "images/securite.webp",
+    desc: "Produits de protection pour garantir la sécurité sur vos chantiers.",
+    subservices: ["Casques", "Gants", "Chaussures de sécurité", "Lunettes de protection"]
+  },
+  {
+    title: "PEINTURE & ACCESSOIRES",
+    img: "images/peinture.avif",
+    desc: "Peintures et accessoires pour vos travaux de finition et décoration.",
+    subservices: ["Peintures murales", "Pinceaux", "Rouleaux", "Solvants"]
+  }
+];
+
+---
+
+<section class="py-20 px-4 bg-50">
+   <div class="container mx-auto max-w-6xl">
+    <div class="text-center mb-16">
+     <h2 class="text-[#1B80BE] font-black text-3xl md:text-5xl mb-4 font-century">Quincaillerie</h2>
+     <p class="text-[#767171] max-w-2xl mx-auto font-medium">Produits fiables et variés pour le bâtiment, l’industrie et les particuliers : outillage, fixations, équipements de sécurité et accessoires de peinture</p>
+     <div class="w-24 h-1.5 bg-[#47AD43] mt-6 rounded-full mx-auto"></div>
+    </div>
+
+      <!--Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {services.map((service) => (
+          <div class="group bg-white rounded-2xl shadow-sm border-b-4 border-b-[#986E3C] border-gray-100  transition-all duration-300 flex flex-col overflow-hidden hover:shadow-xl">
+            <div class="h-94 overflow-hidden relative">
+             <img 
+               src={service.img}
+               alt={service.title}
+               class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+          </div>
+          <div class="p-8 flex flex-col grow">
+            <h3 class="text-2xl font-bold text-[#767171] mb-3 font-century">{service.title}</h3>
+            <p class="text-[#767171] mb-6 leading-relaxed text-sm">{service.desc}</p>
+  
+          <div class="mb-8">
+            <p class="text-[10px] font-bold uppercase tracking-tighter text-[#1B80BE] mb-3">Nos Solutions: </p>
+            <div class="flex flex-wrap gap-2">
+              {service.subservices.map((sub) => (
+                 <span class="px-3 py-1 bg-emerald-50 text-[#767171] text-xs font-semibold rounded-md border border-gray-100">
+                  {sub} 
+                 </span>
+                ))}
+            </div>
+          </div>
+  
+        <div class="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+          <a href={`/projects?filter=${service.title.toLowerCase().replace(/\s+/g, '-')}`} class="inline-flex items-center text-[#47AD43] font-bold hover:translate-x-1 transition-transform">
+            Découvrir nos partenaires <span class="ml-2">→</span>
+          </a>
+        </div>
+        </div>
+      </div>
+        ))}
+        </div>
+        </div>
+  </section>
