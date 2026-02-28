@@ -2,28 +2,28 @@
 const services = [
   {
     title: "CONSTRUCTION",
-    img: "images/construction.jpeg",
+    img: "images/construction.avif",
     desc: "Réalisation de bâtiments résidentiels, commerciaux et industriels avec des standards de qualité élevés.",
     subservices: ["Maisons", "Immeubles", "Entrepôts", "Bureaux"]
   },
   {
     title: "TRAVAUX PUBLICS",
-    img: "images/travaux-publics.jpeg",
+    img: "images/traveaux-public.webp",
     desc: "Infrastructures essentielles pour le développement urbain et rural.",
     subservices: ["Routes", "Ponts", "Canalisations", "Ouvrages d’art"]
   },
   {
     title: "ÉQUIPEMENTS & MATÉRIAUX",
-    img: "images/materiaux.jpeg",
+    img: "images/materiaux.webp",
     desc: "Fourniture de matériaux et équipements fiables pour vos chantiers.",
     subservices: ["Ciment", "Acier", "Bois", "Machines de chantier"]
   },
   {
-    title: "MAINTENANCE & RÉNOVATION",
-    img: "images/renovation.jpeg",
-    desc: "Services de rénovation et d’entretien pour prolonger la durée de vie de vos infrastructures.",
-    subservices: ["Rénovation intérieure", "Réhabilitation", "Entretien préventif", "Modernisation"]
-  }
+    title: "PRODUCTIONS DE PARPAINGS",
+    img:"images/WhatsApp Image 2025-12-21 at 13.58.43.jpeg",
+    desc:"Nous produisons des blocs béton de haute qualité destinés aux travaux de construction résidentielle et industrielle.",
+    subservices: ["Blocs creux standards", "Pavés autobloquants", "Blocs pleins"]
+  },
 ];
 
 ---
@@ -61,8 +61,9 @@ const services = [
                 ))}
             </div>
           </div>
-  
-        <div class="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+         <div class="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+           <a href={`/btp?filter=${service.title.toLowerCase().replace(/\s+/g, '-')}`} class="inline-flex items-center text-[#47AD43] font-bold hover:translate-x-1 transition-transform">
+           En savoir plus <span class="ml-2">→</span></a>
           <a href={`/projects?filter=${service.title.toLowerCase().replace(/\s+/g, '-')}`} class="inline-flex items-center text-[#47AD43] font-bold hover:translate-x-1 transition-transform">
             Voir nos réalisations <span class="ml-2">→</span>
           </a>

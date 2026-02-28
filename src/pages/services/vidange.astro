@@ -3,14 +3,14 @@ const services = [
     {
         title: "VIDANGE DES FOSSES",
         desc: "Services complet de vidange de fosses septiques et bacs a graisse pour particuliers, entreprises et industries",
-        subservices: ["Vidange Haute pression", "Traitement des boues", "Entretien Préventive", "Intervention Rqpide"],
+        subservices: ["Vidange Haute pression", "Traitement des boues", "Entretien Préventive", "Intervention Rapide"],
         img: "images/vidange.webp"
     },
     {
-       title: "DEBOUCHQGE D%URGENCE",
-       desc: "Intervention immédiate pour tout type de bouchon dans vos éviers; toilletes ou colonnes d'eaux usées",
-       subservices: ["Débouchqge Mechanique", "Inspection Caméra", "Diagnostic précis", "Disponibilité 24/7"],
-       img: ""
+       title: "DEBOUCHAGE D'URGENCE",
+       desc: "Intervention immédiate pour tout type de bouchon dans vos léviers, toilletes ou colonnes d'eaux usées",
+       subservices: ["Débouchage Mechanique", "Inspection Caméra", "Diagnostic précis", "Disponibilité 24/7"],
+       img: "images/debauchage.webp"
     }
 ];
 ---
@@ -48,10 +48,11 @@ const services = [
                 ))}
             </div>
           </div>
-  
-        <div class="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+         <div class="mt-auto pt-6 border-t border-gray-100 flex items-center justify-between">
+           <a href={`/vidange?filter=${service.title.toLowerCase().replace(/\s+/g, '-')}`} class="inline-flex items-center text-[#47AD43] font-bold hover:translate-x-1 transition-transform">
+           En savoir plus <span class="ml-2">→</span></a>
           <a href={`/projects?filter=${service.title.toLowerCase().replace(/\s+/g, '-')}`} class="inline-flex items-center text-[#47AD43] font-bold hover:translate-x-1 transition-transform">
-            DEMANDER UNE INTERVENTION <span class="ml-2">→</span>
+            Voir nos réalisations <span class="ml-2">→</span>
           </a>
         </div>
         </div>
